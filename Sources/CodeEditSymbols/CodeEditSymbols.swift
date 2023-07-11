@@ -21,7 +21,7 @@ public extension Image
   /// - Parameter symbol: The name of the symbol in `Symbols.xcassets`
   init(symbol: String)
   {
-    self.init(symbol, bundle: Bundle.module)
+    self.init(symbol, bundle: Bundle.main)
   }
 
   // MARK: - Symbols
@@ -45,7 +45,7 @@ public extension NSImage
   /// - Returns: a NSImage
   static func symbol(named: String) -> NSImage
   {
-    Bundle.module.image(forResource: named) ?? .init()
+    Bundle.main.image(forResource: named) ?? .init()
   }
 
   // MARK: - Symbols
